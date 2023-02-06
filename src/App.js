@@ -70,6 +70,8 @@ function App() {
       </nav>
       <Routes>
         <Route exact path="/" element={<ProductListing products={products} cart={cart} addToCart={addToCart} />} />
+        {/* if failt in prod then another will back it up! */}
+        <Route exact path="/product-checkout-process" element={<ProductListing products={products} cart={cart} addToCart={addToCart} />} />
         <Route path="/checkout" element={<Checkout cart={cart} userInfo={userInfo} setUserInfo={setUserInfo} />} />
         <Route path="/review-order" element={<ReviewOrder cart={cart} userInfo={userInfo} />} />
       </Routes>
